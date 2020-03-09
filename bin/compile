@@ -19,6 +19,7 @@ cd $VENDOR_DIR
 mkdir -p _jon/ffmpeg
 cd _jon/ffmpeg
 curl -L --silent $DOWNLOAD_URL | tar xJ --strip-components=1
+ls
 
 echo "exporting PATH" | indent
 PROFILE_PATH="$BUILD_DIR/.profile.d/ffmpeg.sh"
