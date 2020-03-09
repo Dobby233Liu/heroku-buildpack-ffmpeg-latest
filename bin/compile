@@ -11,11 +11,13 @@ DOWNLOAD_URL="https://johnvansickle.com/ffmpeg/builds/ffmpeg-git-amd64-static.ta
 
 echo "DOWNLOAD_URL = " $DOWNLOAD_URL | indent
 
+cd
 cd $BUILD_DIR
+echo "BUILD_DIR = " $BUILD_DIR | indent
 mkdir -p $VENDOR_DIR
 cd $VENDOR_DIR
-mkdir -p ffmpeg
-cd ffmpeg
+mkdir -p _jon/ffmpeg
+cd _jon/ffmpeg
 curl -L --silent $DOWNLOAD_URL | tar xJ --strip-components=1
 
 echo "exporting PATH" | indent
